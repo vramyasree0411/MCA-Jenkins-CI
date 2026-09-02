@@ -11,6 +11,11 @@ pipeline {
                 echo 'Testing the application...'
             }
         }
+        stage('Security Scan') {  // <-- New Stage Added!
+            steps {
+                echo 'Running security checks...'
+            }
+        }
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
